@@ -4,6 +4,8 @@ const getUserChoice = (userInput) => {
     return userInput;
   }else if (userInput === 'bomb'){
     console.log('you Won with the bomb')
+  }else{
+    alert('choose between rock, paper, scissors or the secret word')
   }
 }
 
@@ -28,7 +30,7 @@ const getComputerChoice = () => {
   }
 }
 
-console.log('computer choice: ' + getComputerChoice());
+
 
 const determineWinner = (userChoice ,computerChoice) => {
 
@@ -52,5 +54,14 @@ else if(userChoice === 'scissors' & computerChoice === 'rock'){
 }
 }
 
-console.log('user choice: ' + getUserChoice('paper'));
-console.log(determineWinner(getUserChoice('bomb'),getComputerChoice()))
+
+
+const playGame = () => {
+   const userChoice = getUserChoice('paper');
+   const computerChoice = getComputerChoice();
+   console.log('User choice: ' + userChoice);
+   console.log('computerChoice:' + computerChoice);
+   console.log(determineWinner(userChoice, computerChoice));
+};
+ 
+playGame();
